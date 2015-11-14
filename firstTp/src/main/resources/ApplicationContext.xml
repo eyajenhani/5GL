@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+<bean id="ep"  class="edu.domain.ExamenPratique">
+<property name="note" value="12"></property>
+</bean>
+<bean id="et"  class="edu.domain.ExamenTheorique">
+<property name="note" value="10"></property>
+</bean>
+<bean id="service" class="edu.service.Service" >
+<property name="exm1" ref="ep"></property>
+<property name="exm2" ref="et"></property>
+</bean> 
+</beans>
